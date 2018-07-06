@@ -1,0 +1,527 @@
+$transition: all 0.3s ease
+
+
+/* Main style */
+body
+  margin: 0
+  padding: 0
+  font-family: HelveticaNeue
+  background-color: #2f3843
+
+h1
+  font-family: 'NarzissProCyrillic'
+  font-size: 62px
+  line-height: 72px
+  color: #fff
+  margin-bottom: 85px
+
+h2
+  font-family: 'NarzissProCyrillic'
+  font-size: 92px
+  line-height: 102px
+  color: #fff
+  margin-bottom: 85px
+
+p, .text
+  font-size: 18px
+  color: #7d7d7d
+  line-height: 32px
+
+  &-white
+    color: #fff
+
+  &-black
+    color: #1d1d1d
+
+  a
+    color: #cd2211
+    text-decoration: none
+    display: inline-block
+    border-bottom: 2px solid #cd2211
+    transition: $transition
+
+    &:hover
+      border-bottom: 2px solid transparent
+
+.btn
+  padding: 25px 0
+  font-size: 22px
+  text-align: center
+  color: #fff
+  line-height: 34px
+  font-family: 'HelveticaNeue'
+  background-color: #cd2211
+  border-radius: 0
+  transition: $transition
+  cursor: pointer
+  margin-top: 50px
+  outline: none
+  box-shadow: none !important
+
+  &-large
+    margin-left: -36px
+    margin-right: -36px
+    display: block
+
+.no-p
+  padding: 0
+
+.pb-0
+  padding-bottom: 0
+
+.mt-45
+  margin-top: 45px
+
+.section
+  position: relative
+  padding-top: 165px
+
+.contain
+  background-color: #fff
+
+  &.p-box
+    padding: 55px 51px
+
+.input-file-box
+  position: relative
+
+  p.text
+    margin-top: 5px
+
+  input[type='file']
+    display: none
+
+  .btn-file
+    padding: 12px 39px 12px 63px
+    font-size: 18px
+    margin: 9px 0 0 0
+    box-sizing: border-box
+    width: 100%
+    border-radius: 4px
+
+.input_box
+  position: relative
+  margin-bottom: 40px
+  display: block
+  width: 100%
+
+  &--input
+    width: 100%
+    color: #1d1d1d
+    font-size: 16px
+    border-top: none
+    border-left: none
+    border-right: none
+    padding: 30px 0 15px 0
+    outline: none
+    background: transparent
+    transition: all 0.1s ease-in-out
+
+    &:valid
+      border-bottom: 2px solid #dadada
+
+      & ~ .bar:before, & ~ .input_box--bar:after
+        background-color: #cd2211
+
+    &.filled
+      border-bottom: 2px solid #dadada
+
+    &:focus ~ label,
+    &.filled ~ label
+      bottom: 35px
+      color: #1d1d1d
+
+    &:focus ~ .input_box--bar:before,
+    &:focus ~ .input_box--bar:after
+      width: 50%
+
+  &--label
+    font-size: 16px
+    bottom: 9px
+    left: 0
+    position: absolute
+    pointer-events: none
+    color: #1d1d1d
+    transition: 0.1s ease-in-out
+
+  &--bar
+    bottom: 2px
+    width: 100%
+    position: absolute
+
+    &:before, &:after
+      content: ""
+      width: 0
+      height: 2px
+      position: absolute
+      background-color: #cd2211
+      transition: all 0.2s ease-in-out
+
+    &:before
+      left: 50%
+
+    &:after
+      right: 50%
+
+.header
+  padding-top: 217px
+
+  .container
+    position: relative
+    z-index: 23
+
+  .header-video
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    z-index: 14
+
+    video
+      width: 100%
+
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      background-image: linear-gradient(to bottom, rgba(47, 56, 67, 0), #2f3843)
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+
+  .text-or
+    margin-top: 24px
+
+.navigation
+  padding: 50px 0
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 50
+
+  nav
+    .nav-item
+      font-size: 18px
+      color: #fff
+      line-height: 32px
+      font-family: 'HelveticaNeue'
+      margin-left: 56px
+      display: inline-block
+      vertical-align: middle
+      position: relative
+
+      &:before
+        content: ''
+        position: absolute
+        z-index: -1
+        height: 15px
+        box-sizing: content-box
+        padding-right: 15px
+        background-color: #cd2211
+        left: 0
+        bottom: 0
+        width: 0
+        visibility: hidden
+        opacity: 0
+        transition: $transition
+
+      &:hover
+        text-decoration: none
+
+        &:before
+          visibility: visible
+          opacity: 1
+          width: 100%
+
+.section1
+  .tabs-contain
+    .tabs-controll
+      border-right: 1px solid #dadada
+      padding-left: 0
+      padding-right: 0
+      counter-reset: item
+
+      .item
+        display: block
+        height: 201px
+        line-height: 201px
+        border-bottom: 1px solid #dadada
+        box-sizing: border-box
+        padding: 0 50px
+        cursor: pointer
+        transition: $transition
+
+        .box
+          display: inline-block
+          vertical-align: middle
+          color: #7d7d7d
+          line-height: 32px
+          font-size: 18px
+          counter-increment: item
+          transition: $transition
+
+          &:before
+            content: "0" counter(item)
+            display: block
+            font-family: 'NarzissProCyrillic'
+            margin-bottom: 5px
+            font-size: 42px
+            color: #1d1d1d
+            transition: $transition
+
+        &.active
+          background-color: #cd2211
+
+          .box
+            color: #fff
+
+            &:before
+              color: #fff
+
+    .tabs_content
+      box-sizing: border-box
+      padding: 30px 50px
+
+      .article
+        font-size: 62px
+        line-height: 82px
+        color: #1d1d1d
+        font-family: 'NarzissProCyrillic'
+        margin-bottom: 40px
+
+.section2
+  .btn-large
+    margin-left: -15px
+    margin-right: -15px
+    margin-top: 40px
+
+  .contain
+    .col-table
+      padding-left: 0
+      padding-right: 0
+
+      .text
+        padding: 0 51px
+
+  table
+    width: 100%
+    margin-bottom: 30px
+
+    tr
+      border-bottom: 1px solid #dadada
+
+      span
+        font-size: 48px
+        line-height: 68px
+
+      &:first-child
+        td
+          padding: 23px 0
+          background-color: #cd2211
+          color: #fff
+          border-right: none
+
+      td
+        text-align: center
+        font-family: 'NarzissProCyrillic'
+        font-size: 18px
+        color: #1d1d1d
+        border-right: 1px solid #dadada
+
+        &:last-child
+          border-right: none
+
+        &:first-child
+          font-family: 'HelveticaNeue'
+          color: #7d7d7d
+          padding: 25px 51px
+          box-sizing: border-box
+          text-align: left
+          background-color: #fff
+
+.section3
+  h2
+    margin-bottom: 0
+
+  .contain
+    margin-top: 150px
+    padding-bottom: 10px
+
+  &__image
+    margin-left: -130px
+    margin-top: -130px
+
+  .list
+    .item
+      position: relative
+      padding-left: 40px
+
+      .article
+        color: #1d1d1d
+        font-size: 22px
+        font-family: 'NarzissProCyrillic'
+        margin-bottom: 20px
+
+      .text
+        margin-bottom: 40px
+
+      &:before
+        content: url('../images/triangle.svg')
+        position: absolute
+        left: 0
+        top: 18px
+
+.section4
+  .item
+    background-color: #fff
+    margin-bottom: 30px
+    height: 263px
+    line-height: 263px
+    cursor: pointer
+
+    .box
+      vertical-align: middle
+      display: inline-block
+      width: 100%
+      box-sizing: border-box
+      padding: 0 15px
+      color: #1d1d1d
+      font-size: 18px
+      line-height: 32px
+
+      img
+        display: block
+        margin: 0 auto 20px
+
+  &-box
+    position: relative
+
+  &-viewbox
+    height: 556px
+    overflow: hidden
+    width: 100%
+    visibility: hidden
+    display: none
+    opacity: 0
+    padding: 55px 0px
+    box-sizing: border-box
+    background-color: #fff
+    position: absolute
+    left: 0
+    top: 0
+    transition: $transition
+
+    &__close
+      position: absolute
+      right: 65px
+      top: 57px
+      width: 36px
+      height: 36px
+      cursor: pointer
+      background-image: url('../images/close.svg')
+      background-repeat: no-repeat
+      background-position: center
+      background-size: 36px
+
+
+    &.show
+      visibility: visible
+      opacity: 1
+
+    img
+      margin-top: 60px
+
+    .article
+      font-size: 42px
+      line-height: 52px
+      color: #1d1d1d
+      font-family: 'NarzissProCyrillic'
+      margin-bottom: 30px
+
+    .point
+      margin-bottom: 10px
+      color: #7d7d7d
+      font-size: 18px
+      line-height: 32px
+
+      span
+        color: #1d1d1d
+
+    .text
+      color: #7d7d7d
+      font-size: 18px
+      margin-bottom: 0
+      margin-top: 66px
+      max-height: 192px
+      overflow: hidden
+
+.section5
+  .article
+    font-size: 42px
+    color: #1d1d1d
+    font-family: 'NarzissProCyrillic'
+    margin-bottom: 25px
+    line-height: 52px
+
+.section6
+  .map
+    height: 609px
+    margin-top: -240px
+    position: relative
+    z-index: 5
+
+  .map-container
+    padding: 56px 50px 57px
+    position: relative
+    z-index: 9
+
+    .article
+      font-size: 42px
+      font-family: 'NarzissProCyrillic'
+      margin-bottom: 25px
+      color: #1d1d1d
+
+    .text
+      color: #1d1d1d
+
+      span
+        color: #7d7d7d
+
+    .email
+      color: #1d1d1d
+      font-family: 'HelveticaNeue'
+      position: relative
+      text-decoration: none
+
+      &:before
+        content: ''
+        width: 100%
+        height: 15px
+        background-color: #cd2211
+        position: absolute
+        padding-right: 10px
+        box-sizing: content-box
+        left: 0
+        bottom: -9px
+        z-index: -1
+        transition: $transition
+
+      &:hover
+        text-decoration: none
+
+        &:before
+          padding-right: 26px
+
+    .logo-big
+      margin-bottom: -60px
+      display: block
+
+.footer
+  padding: 75px 0
+
+
+
+
+
